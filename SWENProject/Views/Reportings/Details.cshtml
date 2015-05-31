@@ -1,0 +1,58 @@
+﻿@model SWENProject.Models.Reporting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reporting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllOccupantsInARoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllOccupantsInARoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllGuestInAllTheRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllGuestInAllTheRoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomOccupancy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomOccupancy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DutiesStaffAllocatedTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DutiesStaffAllocatedTo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReportID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

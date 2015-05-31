@@ -1,0 +1,154 @@
+﻿@model SWENProject.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffIncharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffIncharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckinDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckinDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckoutDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckoutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfAdult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfAdult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfKid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfKid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditCardNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditCardNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditCardHolderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditCardHolderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditCardExpiryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditCardExpiryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalRemarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalRemarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LateCheck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LateCheck)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
