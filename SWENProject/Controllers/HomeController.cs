@@ -27,6 +27,13 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        public ActionResult Booking()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
         public ActionResult BookingAdmin()
         {
             ViewBag.Message = "Your contact page.";
