@@ -52,7 +52,7 @@ namespace SWENProject.Controllers
             {
                 db.Bookings.Add(booking);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Booking", "Home");
             }
 
             return View(booking);
@@ -84,7 +84,7 @@ namespace SWENProject.Controllers
             {
                 db.Entry(booking).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Booking", "Home");
             }
             return View(booking);
         }
@@ -112,7 +112,7 @@ namespace SWENProject.Controllers
             Booking booking = db.Bookings.Find(id);
             db.Bookings.Remove(booking);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Booking", "Home");
         }
 
         protected override void Dispose(bool disposing)
