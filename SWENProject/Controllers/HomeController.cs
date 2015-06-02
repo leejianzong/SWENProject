@@ -27,6 +27,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Booking()
         {
             ViewBag.Message = "Your Booking page.";
@@ -34,6 +35,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult RoomAvailability()
         {
             ViewBag.Message = "Your Room Availability page.";
@@ -41,6 +43,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Reporting()
         {
             ViewBag.Message = "Your Report page.";
@@ -48,6 +51,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult StaffManagement()
         {
             ViewBag.Message = "Your Staff Management page.";
@@ -55,6 +59,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult UserAccountAndLogin()
         {
             ViewBag.Message = "Your User Account And Login page.";
