@@ -8,12 +8,13 @@ namespace SWENProject.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model2")
         {
         }
 
         public virtual DbSet<Booking> Bookings { get; set; }
         public virtual DbSet<Reporting> Reportings { get; set; }
+        public virtual DbSet<RoomAvailability> RoomAvailabilities { get; set; }
         public virtual DbSet<StaffManagement> StaffManagements { get; set; }
         public virtual DbSet<UserAccountAndLogin> UserAccountAndLogins { get; set; }
 
@@ -85,6 +86,50 @@ namespace SWENProject.Models
 
             modelBuilder.Entity<Reporting>()
                 .Property(e => e.DutiesStaffAllocatedTo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.BookingID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.RoomStatus)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.StaffIncharge)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.FirstName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.LastName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.MailingAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.EmailAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.PaymentDetails)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.CreditCardNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.CreditCardHolderName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<RoomAvailability>()
+                .Property(e => e.AdditionalRemarks)
                 .IsUnicode(false);
 
             modelBuilder.Entity<StaffManagement>()

@@ -178,6 +178,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReportingsAPIController.cs" />
     <Compile Include="Controllers\ReportingsController.cs" />
+    <Compile Include="Controllers\RoomAvailabilitiesAPIController.cs" />
+    <Compile Include="Controllers\RoomAvailabilitiesController.cs" />
     <Compile Include="Controllers\StaffManagementsAPIController.cs" />
     <Compile Include="Controllers\StaffManagementsController.cs" />
     <Compile Include="Controllers\UserAccountAndLoginsAPIController.cs" />
@@ -190,6 +192,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\Reporting.cs" />
+    <Compile Include="Models\RoomAvailability.cs" />
     <Compile Include="Models\StaffManagement.cs" />
     <Compile Include="Models\UserAccountAndLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,16 +255,23 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Bookings\Create.cshtml" />
-    <Content Include="Views\Bookings\Delete.cshtml" />
-    <Content Include="Views\Bookings\Details.cshtml" />
-    <Content Include="Views\Bookings\Edit.cshtml" />
-    <Content Include="Views\Bookings\Index.cshtml" />
+    <Content Include="Views\Home\Booking.cshtml" />
+    <Content Include="Views\Home\RoomAvailability.cshtml" />
     <Content Include="Views\Reportings\Create.cshtml" />
     <Content Include="Views\Reportings\Delete.cshtml" />
     <Content Include="Views\Reportings\Details.cshtml" />
     <Content Include="Views\Reportings\Edit.cshtml" />
     <Content Include="Views\Reportings\Index.cshtml" />
+    <Content Include="Views\Bookings\Create.cshtml" />
+    <Content Include="Views\Bookings\Delete.cshtml" />
+    <Content Include="Views\Bookings\Details.cshtml" />
+    <Content Include="Views\Bookings\Edit.cshtml" />
+    <Content Include="Views\Bookings\Index.cshtml" />
+    <Content Include="Views\RoomAvailabilities\Create.cshtml" />
+    <Content Include="Views\RoomAvailabilities\Delete.cshtml" />
+    <Content Include="Views\RoomAvailabilities\Details.cshtml" />
+    <Content Include="Views\RoomAvailabilities\Edit.cshtml" />
+    <Content Include="Views\RoomAvailabilities\Index.cshtml" />
     <Content Include="Views\StaffManagements\Create.cshtml" />
     <Content Include="Views\StaffManagements\Delete.cshtml" />
     <Content Include="Views\StaffManagements\Details.cshtml" />
@@ -272,8 +282,8 @@
     <Content Include="Views\UserAccountAndLogins\Details.cshtml" />
     <Content Include="Views\UserAccountAndLogins\Edit.cshtml" />
     <Content Include="Views\UserAccountAndLogins\Index.cshtml" />
-    <Content Include="Views\Home\BookingAdmin.cshtml" />
-    <Content Include="Views\Home\Booking.cshtml" />
+    <Content Include="Views\Bookings\Edit2.cshtml" />
+    <Content Include="Views\Home\Reporting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

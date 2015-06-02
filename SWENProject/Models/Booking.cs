@@ -51,18 +51,15 @@ namespace SWENProject.Models
         [StringLength(50)]
         public string PaymentDetails { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string CreditCardNumber { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string CreditCardHolderName { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime CreditCardExpiryDate { get; set; }
+        public DateTime? CreditCardExpiryDate { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string AdditionalRemarks { get; set; }
 

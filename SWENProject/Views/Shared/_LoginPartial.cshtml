@@ -7,22 +7,25 @@
     <ul class="nav navbar-nav">
         @if (User.IsInRole("admin"))
         {
-            <li>@Html.ActionLink("Booking", "BookingAdmin", "Home")</li>
-            <li>@Html.ActionLink("About", "About", "Home")</li>
-            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
+            <li>@Html.ActionLink("Report", "Reporting", "Home")</li>
+            <li>@Html.ActionLink("Staff Management", "StaffManagement", "Home")</li>
+            <li>@Html.ActionLink("User Account", "UserAccountAndLogin", "Home")</li>
             <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
 
         }
         else if (User.IsInRole("management"))
         {
-            <li>@Html.ActionLink("Booking", "BookingAdmin", "Home")</li>
-            <li>@Html.ActionLink("About", "About", "Home")</li>
-            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
+            <li>@Html.ActionLink("Report", "Reporting", "Home")</li>
+            <li>@Html.ActionLink("Staff Management", "StaffManagement", "Home")</li>
         }
         else
         {
-            <li>@Html.ActionLink("About", "About", "Home")</li>
-            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
         }
     </ul>
 
@@ -37,6 +40,8 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }

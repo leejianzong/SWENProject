@@ -34,7 +34,7 @@ namespace SWENProject.Controllers
             return View();
         }
 
-        public ActionResult BookingAdmin()
+        public ActionResult RoomAvailability()
         {
             ViewBag.Message = "Your contact page.";
 
