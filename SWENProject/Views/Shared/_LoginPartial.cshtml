@@ -8,7 +8,7 @@
         @if (User.IsInRole("admin"))
         {
             <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
-            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailability", "Home")</li>
             <li>@Html.ActionLink("Report", "Reporting", "Home")</li>
             <li>@Html.ActionLink("Staff Management", "StaffManagement", "Home")</li>
             <li>@Html.ActionLink("User Account", "UserAccountAndLogin", "Home")</li>
@@ -18,14 +18,14 @@
         else if (User.IsInRole("management"))
         {
             <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
-            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailability", "Home")</li>
             <li>@Html.ActionLink("Report", "Reporting", "Home")</li>
             <li>@Html.ActionLink("Staff Management", "StaffManagement", "Home")</li>
         }
         else
         {
             <li>@Html.ActionLink("Booking", "Booking", "Home")</li>
-            <li>@Html.ActionLink("Room Availablility", "RoomAvailablility", "Home")</li>
+            <li>@Html.ActionLink("Room Availablility", "RoomAvailability", "Home")</li>
         }
     </ul>
 

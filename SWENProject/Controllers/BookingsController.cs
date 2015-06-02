@@ -103,15 +103,17 @@ namespace SWENProject.Controllers
             }
             return View(booking);
         }
+
         // POST: RoomAvailabilities/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit2([Bind(Include = "BookingID,RoomStatus,StaffIncharge,FirstName,LastName,CheckinDate,CheckoutDate,NumberOfAdult,NumberOfKid,ContactNumber,MailingAddress,EmailAddress,PaymentDetails,CreditCardNumber,CreditCardHolderName,CreditCardExpiryDate,AdditionalRemarks,LateCheck")] RoomAvailability roomAvailability)
+        public ActionResult Edit2([Bind(Include = "BookingID,RoomStatus,StaffIncharge,FirstName,LastName,CheckinDate,CheckoutDate,NumberOfAdult,NumberOfKid,ContactNumber,MailingAddress,EmailAddress,PaymentDetails,CreditCardNumber,CreditCardHolderName,CreditCardExpiryDate,AdditionalRemarks,LateCheck")] RoomAvailability roomAvailability, Booking booking)
         {
             if (ModelState.IsValid)
             {
+                db.Entry(booking).State = EntityState.Modified;
                 db.RoomAvailabilities.Add(roomAvailability);
                 db.SaveChanges();
                 return RedirectToAction("RoomAvailability", "Home");

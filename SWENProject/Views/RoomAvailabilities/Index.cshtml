@@ -1,0 +1,129 @@
+﻿@model IEnumerable<SWENProject.Models.RoomAvailability>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffIncharge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckinDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckoutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfAdult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfKid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardHolderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardExpiryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalRemarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LateCheck)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffIncharge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckinDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckoutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfAdult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfKid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardHolderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardExpiryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalRemarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LateCheck)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BookingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BookingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookingID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,4 +1,4 @@
-﻿@model SWENProject.Models.Booking
+﻿@model SWENProject.Models.RoomAvailability
 @{
     ViewBag.Title = "Room Availability";
 }
@@ -53,7 +53,7 @@
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
-                <h4>Check-in Form</h4>
+                <h4>RoomAvailability</h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
