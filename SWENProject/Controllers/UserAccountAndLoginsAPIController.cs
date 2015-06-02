@@ -80,22 +80,7 @@ namespace SWENProject.Controllers
             }
 
             db.UserAccountAndLogins.Add(userAccountAndLogin);
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (UserAccountAndLoginExists(userAccountAndLogin.AccountID))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = userAccountAndLogin.AccountID }, userAccountAndLogin);
         }

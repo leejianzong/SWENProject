@@ -10,7 +10,6 @@ namespace SWENProject.Models
     public partial class UserAccountAndLogin
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int AccountID { get; set; }
 
         [Required]

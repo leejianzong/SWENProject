@@ -59,38 +59,6 @@ namespace SWENProject.Controllers
         }
 
         // GET: Bookings/Edit/5
-        public ActionResult Edit2(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Booking booking = db.Bookings.Find(id);
-            if (booking == null)
-            {
-                return HttpNotFound();
-            }
-            return View(booking);
-        }
-
-        // POST: RoomAvailabilities/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit2([Bind(Include = "BookingID,RoomStatus,StaffIncharge,FirstName,LastName,CheckinDate,CheckoutDate,NumberOfAdult,NumberOfKid,ContactNumber,MailingAddress,EmailAddress,PaymentDetails,CreditCardNumber,CreditCardHolderName,CreditCardExpiryDate,AdditionalRemarks,LateCheck")] RoomAvailability roomAvailability)
-        {
-            if (ModelState.IsValid)
-            {
-                db.RoomAvailabilities.Add(roomAvailability);
-                db.SaveChanges();
-                return RedirectToAction("RoomAvailability", "Home");
-            }
-
-            return View(roomAvailability);
-        }
-
-        // GET: Bookings/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -119,6 +87,37 @@ namespace SWENProject.Controllers
                 return RedirectToAction("Booking", "Home");
             }
             return View(booking);
+        }
+
+        // GET: Bookings/Edit/5
+        public ActionResult Edit2(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Booking booking = db.Bookings.Find(id);
+            if (booking == null)
+            {
+                return HttpNotFound();
+            }
+            return View(booking);
+        }
+        // POST: RoomAvailabilities/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit2([Bind(Include = "BookingID,RoomStatus,StaffIncharge,FirstName,LastName,CheckinDate,CheckoutDate,NumberOfAdult,NumberOfKid,ContactNumber,MailingAddress,EmailAddress,PaymentDetails,CreditCardNumber,CreditCardHolderName,CreditCardExpiryDate,AdditionalRemarks,LateCheck")] RoomAvailability roomAvailability)
+        {
+            if (ModelState.IsValid)
+            {
+                db.RoomAvailabilities.Add(roomAvailability);
+                db.SaveChanges();
+                return RedirectToAction("RoomAvailability", "Home");
+            }
+
+            return View(roomAvailability);
         }
 
         // GET: Bookings/Delete/5
