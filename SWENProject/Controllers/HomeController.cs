@@ -29,14 +29,35 @@ namespace SWENProject.Controllers
 
         public ActionResult Booking()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Booking page.";
 
             return View();
         }
 
         public ActionResult RoomAvailability()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Room Availability page.";
+
+            return View();
+        }
+
+        public ActionResult Reporting()
+        {
+            ViewBag.Message = "Your Report page.";
+
+            return View();
+        }
+
+        public ActionResult StaffManagement()
+        {
+            ViewBag.Message = "Your Staff Management page.";
+
+            return View();
+        }
+
+        public ActionResult UserAccountAndLogin()
+        {
+            ViewBag.Message = "Your User Account And Login page.";
 
             return View();
         }

@@ -10,8 +10,8 @@ namespace SWENProject.Models
     public partial class UserAccountAndLogin
     {
         [Key]
-        [StringLength(50)]
-        public string AccountID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int AccountID { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -25,9 +25,11 @@ namespace SWENProject.Models
         public string EmailAddress { get; set; }
 
         [Required]
-        public byte[] FirstName { get; set; }
+        [StringLength(50)]
+        public string FirstName { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string LastName { get; set; }
 
         [Required]

@@ -153,10 +153,6 @@ namespace SWENProject.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<UserAccountAndLogin>()
-                .Property(e => e.AccountID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<UserAccountAndLogin>()
                 .Property(e => e.UserName)
                 .IsUnicode(false);
 
@@ -166,6 +162,10 @@ namespace SWENProject.Models
 
             modelBuilder.Entity<UserAccountAndLogin>()
                 .Property(e => e.EmailAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<UserAccountAndLogin>()
+                .Property(e => e.FirstName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<UserAccountAndLogin>()

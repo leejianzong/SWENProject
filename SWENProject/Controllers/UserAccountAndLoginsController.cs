@@ -21,7 +21,7 @@ namespace SWENProject.Controllers
         }
 
         // GET: UserAccountAndLogins/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -52,14 +52,14 @@ namespace SWENProject.Controllers
             {
                 db.UserAccountAndLogins.Add(userAccountAndLogin);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("UserAccountAndLogin", "Home");
             }
 
             return View(userAccountAndLogin);
         }
 
         // GET: UserAccountAndLogins/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -84,13 +84,13 @@ namespace SWENProject.Controllers
             {
                 db.Entry(userAccountAndLogin).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("UserAccountAndLogin", "Home");
             }
             return View(userAccountAndLogin);
         }
 
         // GET: UserAccountAndLogins/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -107,12 +107,12 @@ namespace SWENProject.Controllers
         // POST: UserAccountAndLogins/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             UserAccountAndLogin userAccountAndLogin = db.UserAccountAndLogins.Find(id);
             db.UserAccountAndLogins.Remove(userAccountAndLogin);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("UserAccountAndLogin", "Home");
         }
 
         protected override void Dispose(bool disposing)

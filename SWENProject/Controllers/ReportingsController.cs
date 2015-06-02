@@ -52,7 +52,7 @@ namespace SWENProject.Controllers
             {
                 db.Reportings.Add(reporting);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Reporting", "Home");
             }
 
             return View(reporting);
@@ -84,7 +84,7 @@ namespace SWENProject.Controllers
             {
                 db.Entry(reporting).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Reporting", "Home");
             }
             return View(reporting);
         }
@@ -112,7 +112,7 @@ namespace SWENProject.Controllers
             Reporting reporting = db.Reportings.Find(id);
             db.Reportings.Remove(reporting);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Reporting", "Home");
         }
 
         protected override void Dispose(bool disposing)

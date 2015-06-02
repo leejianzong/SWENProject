@@ -52,7 +52,7 @@ namespace SWENProject.Controllers
             {
                 db.StaffManagements.Add(staffManagement);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("StaffManagement", "Home");
             }
 
             return View(staffManagement);
@@ -84,7 +84,7 @@ namespace SWENProject.Controllers
             {
                 db.Entry(staffManagement).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("StaffManagement", "Home");
             }
             return View(staffManagement);
         }
@@ -112,7 +112,7 @@ namespace SWENProject.Controllers
             StaffManagement staffManagement = db.StaffManagements.Find(id);
             db.StaffManagements.Remove(staffManagement);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("StaffManagement", "Home");
         }
 
         protected override void Dispose(bool disposing)

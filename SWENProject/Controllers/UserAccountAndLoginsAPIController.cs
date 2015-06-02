@@ -24,7 +24,7 @@ namespace SWENProject.Controllers
 
         // GET: api/UserAccountAndLoginsAPI/5
         [ResponseType(typeof(UserAccountAndLogin))]
-        public IHttpActionResult GetUserAccountAndLogin(string id)
+        public IHttpActionResult GetUserAccountAndLogin(int id)
         {
             UserAccountAndLogin userAccountAndLogin = db.UserAccountAndLogins.Find(id);
             if (userAccountAndLogin == null)
@@ -37,7 +37,7 @@ namespace SWENProject.Controllers
 
         // PUT: api/UserAccountAndLoginsAPI/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUserAccountAndLogin(string id, UserAccountAndLogin userAccountAndLogin)
+        public IHttpActionResult PutUserAccountAndLogin(int id, UserAccountAndLogin userAccountAndLogin)
         {
             if (!ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace SWENProject.Controllers
 
         // DELETE: api/UserAccountAndLoginsAPI/5
         [ResponseType(typeof(UserAccountAndLogin))]
-        public IHttpActionResult DeleteUserAccountAndLogin(string id)
+        public IHttpActionResult DeleteUserAccountAndLogin(int id)
         {
             UserAccountAndLogin userAccountAndLogin = db.UserAccountAndLogins.Find(id);
             if (userAccountAndLogin == null)
@@ -125,7 +125,7 @@ namespace SWENProject.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserAccountAndLoginExists(string id)
+        private bool UserAccountAndLoginExists(int id)
         {
             return db.UserAccountAndLogins.Count(e => e.AccountID == id) > 0;
         }
